@@ -18,7 +18,7 @@ function Favorites() {
 
     return <div className="favorites-empty">
         <h2>No Favorites Yet</h2>
-        <p>add musics to your favorites</p>
+        <p>add albums to your favorites</p>
     </div>
 }
 

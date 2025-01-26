@@ -1,8 +1,6 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. This project is my first project in React. It is an album finder that uses Spotify's API to return Spotify's 
+newest released albums and a list of albums whenever you search an artist's name. The albums displayed show the date the album was published and allow the user to open the album in Spotify in a new tab. The user can favorite albums by clicking the star at the top corner of each album and a display of their favorited albums will appear in the favorites tab. 
+2. I chose to make the home page the latest released Spotify albums so that the user can see what's popular and find new music. It also gave me good practice with using different elements of the Spotify API which I think will be important in Spark projects where I may have to pull data from different sources. I chose to include a search feature because I wanted the user to be able to filter the albums that they wanted by artist. I also wanted to learn how to use search functionality as I imagine that will be a relevant function in future projects where you have to manage larger databases or search for usernames in a system. I also added the favorites tab so that the user
+could save their favorite albums to listen to later or new albums they intend on listening to. I wanted to learn how to connect different pages together and save information from one to the other and I intend to build on that in Spark to build a cohesive multi-paged website.
+3. This project took about 15 hours.
+4. Link to project video: https://drive.google.com/file/d/1rEOx8qECw4v-w6Hv6sp_JG78AZhQ86wZ/view?usp=sharing

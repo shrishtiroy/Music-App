@@ -10,6 +10,7 @@ function Home() {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
     const[accessToken, setAccessToken] = useState("");
+    const[displayContext, setDisplayContext] = useState("Latest Releases");
     const CLIENT_ID = "ed4966e2fd0d4a39815c88a3f1859368";
     const CLIENT_SECRET = "f3d8cae916e245ebade30f837131aa7d";
     
@@ -49,6 +50,7 @@ function Home() {
                 try {
                     const popularMusics = await getPopularMusics(accessToken);
                     setAlbums(popularMusics);
+                    setDisplayContext("Latest Releases");
                     setLoading(false);
                 } catch (err) {
                     console.error(err);
@@ -70,6 +72,7 @@ function Home() {
         try{
             const searchResults = await searchMusics(searchQuery, accessToken)
             setAlbums(searchResults)
+            setDisplayContext("Searching for: " + searchQuery + "'s albums");
             setError(null)
         }catch(err){
             console.log(err)
@@ -83,6 +86,7 @@ function Home() {
 
     return (
     <div className="home">
+        
         <form onSubmit={handleSearch} className = "search-form">
             <input 
                 type = "text" 
@@ -92,6 +96,7 @@ function Home() {
                 onChange={(e) => setSearchQuery(e.target.value)}/>
                 <button type ="submit" className="search-button">Search</button>
         </form>
+        <h2>{displayContext}</h2>
         {error && <div className="error-message">{error}</div>}
     {loading ? (
         <div className="loading">Loading...</div>): (
